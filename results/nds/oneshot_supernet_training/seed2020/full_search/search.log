@@ -1,0 +1,2132 @@
+main                INFO: CWD: /home/Anonymous/projects/surgery/my_nas_resnext/examples/research/surgery/nds
+main                INFO: CMD: /home/Anonymous/anaconda3/envs/mynas_inas/bin/mynas search /home/Anonymous/projects/surgery/my_nas_resnext/examples/research/surgery/nds/search_cfgs/0724/full_search.yaml --gpu 0 --seed 2020 --save-every 100 --train-dir /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search
+main                INFO: GPU device = 0
+main                INFO: Setting random seed: 2020.
+main                INFO: Loading configuration files.
+main                INFO: Initializing components.
+main                INFO: Component [search_space] type： germ
+main                INFO: Component [controller] type： random_sample
+main                INFO: Component [dataset] type： cifar10
+main                INFO: Component [weights_manager] type： germ
+GermResNextA        INFO: Constructing stage 0:
+	depth    choices: Choices(choices: [1, 2, 4, 8, 16], size: 1, replace: True, p: [0.2, 0.2, 0.2, 0.2, 0.2])
+	width    choices: Choices(choices: [16, 32, 64, 128, 256], size: 1, replace: True, p: [0.2, 0.2, 0.2, 0.2, 0.2])
+	stride   choices: 1
+	bot_mul  choices: Choices(choices: [0.25, 0.5, 1], size: 1, replace: True, p: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333])
+	num_group choices: Choices(choices: [1, 2, 4], size: 1, replace: True, p: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333])
+GermResNextA        INFO: Constructing stage 1:
+	depth    choices: Choices(choices: [1, 2, 4, 8, 16], size: 1, replace: True, p: [0.2, 0.2, 0.2, 0.2, 0.2])
+	width    choices: Choices(choices: [16, 32, 64, 128, 256], size: 1, replace: True, p: [0.2, 0.2, 0.2, 0.2, 0.2])
+	stride   choices: 2
+	bot_mul  choices: Choices(choices: [0.25, 0.5, 1], size: 1, replace: True, p: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333])
+	num_group choices: Choices(choices: [1, 2, 4], size: 1, replace: True, p: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333])
+GermResNextA        INFO: Constructing stage 2:
+	depth    choices: Choices(choices: [1, 2, 4, 8, 16], size: 1, replace: True, p: [0.2, 0.2, 0.2, 0.2, 0.2])
+	width    choices: Choices(choices: [16, 32, 64, 128, 256], size: 1, replace: True, p: [0.2, 0.2, 0.2, 0.2, 0.2])
+	stride   choices: 2
+	bot_mul  choices: Choices(choices: [0.25, 0.5, 1], size: 1, replace: True, p: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333])
+	num_group choices: Choices(choices: [1, 2, 4], size: 1, replace: True, p: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333])
+MepaEvaluator       INFO: Data queue configurations:
+	surrogate: {'split': 'train', 'portion': 0.0, 'kwargs': {}, 'batch_size': 64}
+	mepa: {'split': 'train', 'portion': 0.8, 'kwargs': {}, 'batch_size': 64}
+	controller: {'split': 'train', 'portion': 0.2, 'kwargs': {}, 'batch_size': 64}
+	derive: {'split': 'train_testTransform', 'portion': [0.8, 1.0], 'kwargs': {'shuffle': False, 'no_distributed_sampler': False}, 'batch_size': 64}
+main                INFO: Initializing trainer and starting the search.
+main                INFO: Component [trainer] type： simple
+SimpleTrainer    WARNING: The suggested `controller_steps` (157) from `evaluator.suggested_controller_steps_per_epoch()` differs from the config setting (  0).
+SimpleTrainer       INFO: Epoch   1: [evaluator update] loss: 5.074; reward: 0.105; acc: 0.105
+MepaEvaluator       INFO: Schedule step   5: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch   2: [evaluator update] loss: 2.916; reward: 0.108; acc: 0.108
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch   3: [evaluator update] loss: 2.572; reward: 0.125; acc: 0.125
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch   4: [evaluator update] loss: 2.409; reward: 0.155; acc: 0.155
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch   5: [evaluator update] loss: 2.363; reward: 0.162; acc: 0.162
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch   6: [evaluator update] loss: 2.296; reward: 0.175; acc: 0.175
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch   7: [evaluator update] loss: 2.221; reward: 0.187; acc: 0.187
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch   8: [evaluator update] loss: 2.201; reward: 0.192; acc: 0.192
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch   9: [evaluator update] loss: 2.169; reward: 0.195; acc: 0.195
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  10: [evaluator update] loss: 2.155; reward: 0.199; acc: 0.199
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  11: [evaluator update] loss: 2.118; reward: 0.204; acc: 0.204
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  12: [evaluator update] loss: 2.126; reward: 0.206; acc: 0.206
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  13: [evaluator update] loss: 2.071; reward: 0.215; acc: 0.215
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  14: [evaluator update] loss: 2.079; reward: 0.215; acc: 0.215
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  15: [evaluator update] loss: 2.051; reward: 0.218; acc: 0.218
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  16: [evaluator update] loss: 2.034; reward: 0.223; acc: 0.223
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  17: [evaluator update] loss: 2.026; reward: 0.228; acc: 0.228
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  18: [evaluator update] loss: 2.009; reward: 0.234; acc: 0.234
+MepaEvaluator       INFO: Schedule step   2: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  19: [evaluator update] loss: 1.983; reward: 0.238; acc: 0.238
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  20: [evaluator update] loss: 1.976; reward: 0.240; acc: 0.240
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  21: [evaluator update] loss: 1.956; reward: 0.247; acc: 0.247
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  22: [evaluator update] loss: 1.935; reward: 0.252; acc: 0.252
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  23: [evaluator update] loss: 1.922; reward: 0.252; acc: 0.252
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  24: [evaluator update] loss: 1.921; reward: 0.257; acc: 0.257
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  25: [evaluator update] loss: 1.908; reward: 0.256; acc: 0.256
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  26: [evaluator update] loss: 1.891; reward: 0.267; acc: 0.267
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  27: [evaluator update] loss: 1.872; reward: 0.272; acc: 0.272
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  28: [evaluator update] loss: 1.878; reward: 0.274; acc: 0.274
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  29: [evaluator update] loss: 1.868; reward: 0.275; acc: 0.275
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  30: [evaluator update] loss: 1.852; reward: 0.283; acc: 0.283
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  31: [evaluator update] loss: 1.856; reward: 0.283; acc: 0.283
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  32: [evaluator update] loss: 1.837; reward: 0.288; acc: 0.288
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  33: [evaluator update] loss: 1.832; reward: 0.291; acc: 0.291
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  34: [evaluator update] loss: 1.836; reward: 0.295; acc: 0.295
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  35: [evaluator update] loss: 1.809; reward: 0.304; acc: 0.304
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  36: [evaluator update] loss: 1.795; reward: 0.309; acc: 0.309
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  37: [evaluator update] loss: 1.788; reward: 0.311; acc: 0.311
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  38: [evaluator update] loss: 1.774; reward: 0.316; acc: 0.316
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  39: [evaluator update] loss: 1.780; reward: 0.319; acc: 0.319
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  40: [evaluator update] loss: 1.770; reward: 0.323; acc: 0.323
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  41: [evaluator update] loss: 1.768; reward: 0.327; acc: 0.327
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  42: [evaluator update] loss: 1.751; reward: 0.333; acc: 0.333
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  43: [evaluator update] loss: 1.737; reward: 0.338; acc: 0.338
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  44: [evaluator update] loss: 1.729; reward: 0.341; acc: 0.341
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  45: [evaluator update] loss: 1.723; reward: 0.347; acc: 0.347
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  46: [evaluator update] loss: 1.710; reward: 0.350; acc: 0.350
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  47: [evaluator update] loss: 1.706; reward: 0.355; acc: 0.355
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  48: [evaluator update] loss: 1.712; reward: 0.355; acc: 0.355
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  49: [evaluator update] loss: 1.689; reward: 0.361; acc: 0.361
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  50: [evaluator update] loss: 1.689; reward: 0.364; acc: 0.364
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  51: [evaluator update] loss: 1.678; reward: 0.371; acc: 0.371
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  52: [evaluator update] loss: 1.659; reward: 0.377; acc: 0.377
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  53: [evaluator update] loss: 1.671; reward: 0.372; acc: 0.372
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  54: [evaluator update] loss: 1.650; reward: 0.383; acc: 0.383
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  55: [evaluator update] loss: 1.630; reward: 0.388; acc: 0.388
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  56: [evaluator update] loss: 1.623; reward: 0.394; acc: 0.394
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  57: [evaluator update] loss: 1.602; reward: 0.399; acc: 0.399
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  58: [evaluator update] loss: 1.600; reward: 0.401; acc: 0.401
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  59: [evaluator update] loss: 1.589; reward: 0.410; acc: 0.410
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  60: [evaluator update] loss: 1.587; reward: 0.407; acc: 0.407
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  61: [evaluator update] loss: 1.572; reward: 0.413; acc: 0.413
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  62: [evaluator update] loss: 1.560; reward: 0.423; acc: 0.423
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  63: [evaluator update] loss: 1.556; reward: 0.424; acc: 0.424
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  64: [evaluator update] loss: 1.537; reward: 0.427; acc: 0.427
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  65: [evaluator update] loss: 1.541; reward: 0.433; acc: 0.433
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  66: [evaluator update] loss: 1.546; reward: 0.433; acc: 0.433
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  67: [evaluator update] loss: 1.528; reward: 0.438; acc: 0.438
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  68: [evaluator update] loss: 1.504; reward: 0.446; acc: 0.446
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  69: [evaluator update] loss: 1.483; reward: 0.454; acc: 0.454
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  70: [evaluator update] loss: 1.474; reward: 0.455; acc: 0.455
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  71: [evaluator update] loss: 1.469; reward: 0.461; acc: 0.461
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  72: [evaluator update] loss: 1.473; reward: 0.459; acc: 0.459
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  73: [evaluator update] loss: 1.456; reward: 0.467; acc: 0.467
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  74: [evaluator update] loss: 1.457; reward: 0.471; acc: 0.471
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  75: [evaluator update] loss: 1.444; reward: 0.473; acc: 0.473
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  76: [evaluator update] loss: 1.431; reward: 0.476; acc: 0.476
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  77: [evaluator update] loss: 1.425; reward: 0.482; acc: 0.482
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  78: [evaluator update] loss: 1.420; reward: 0.480; acc: 0.480
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  79: [evaluator update] loss: 1.404; reward: 0.490; acc: 0.490
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  80: [evaluator update] loss: 1.393; reward: 0.490; acc: 0.490
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  81: [evaluator update] loss: 1.393; reward: 0.493; acc: 0.493
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  82: [evaluator update] loss: 1.370; reward: 0.505; acc: 0.505
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  83: [evaluator update] loss: 1.385; reward: 0.499; acc: 0.499
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  84: [evaluator update] loss: 1.358; reward: 0.508; acc: 0.508
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  85: [evaluator update] loss: 1.364; reward: 0.506; acc: 0.506
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  86: [evaluator update] loss: 1.357; reward: 0.509; acc: 0.509
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  87: [evaluator update] loss: 1.373; reward: 0.504; acc: 0.504
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  88: [evaluator update] loss: 1.350; reward: 0.511; acc: 0.511
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  89: [evaluator update] loss: 1.337; reward: 0.518; acc: 0.518
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  90: [evaluator update] loss: 1.340; reward: 0.516; acc: 0.516
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  91: [evaluator update] loss: 1.331; reward: 0.521; acc: 0.521
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  92: [evaluator update] loss: 1.313; reward: 0.526; acc: 0.526
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  93: [evaluator update] loss: 1.307; reward: 0.530; acc: 0.530
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  94: [evaluator update] loss: 1.303; reward: 0.531; acc: 0.531
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  95: [evaluator update] loss: 1.307; reward: 0.530; acc: 0.530
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  96: [evaluator update] loss: 1.290; reward: 0.532; acc: 0.532
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  97: [evaluator update] loss: 1.301; reward: 0.534; acc: 0.534
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  98: [evaluator update] loss: 1.296; reward: 0.534; acc: 0.534
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch  99: [evaluator update] loss: 1.276; reward: 0.539; acc: 0.539
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 100: [evaluator update] loss: 1.267; reward: 0.543; acc: 0.543
+SimpleTrainer       INFO: Epoch 100: Save all checkpoints to directory /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search/100/
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 101: [evaluator update] loss: 1.274; reward: 0.541; acc: 0.541
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 102: [evaluator update] loss: 1.252; reward: 0.551; acc: 0.551
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 103: [evaluator update] loss: 1.245; reward: 0.554; acc: 0.554
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 104: [evaluator update] loss: 1.247; reward: 0.550; acc: 0.550
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 105: [evaluator update] loss: 1.235; reward: 0.558; acc: 0.558
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 106: [evaluator update] loss: 1.253; reward: 0.551; acc: 0.551
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 107: [evaluator update] loss: 1.245; reward: 0.554; acc: 0.554
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 108: [evaluator update] loss: 1.244; reward: 0.554; acc: 0.554
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 109: [evaluator update] loss: 1.233; reward: 0.556; acc: 0.556
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 110: [evaluator update] loss: 1.218; reward: 0.563; acc: 0.563
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 111: [evaluator update] loss: 1.212; reward: 0.568; acc: 0.568
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 112: [evaluator update] loss: 1.232; reward: 0.559; acc: 0.559
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 113: [evaluator update] loss: 1.211; reward: 0.566; acc: 0.566
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 114: [evaluator update] loss: 1.222; reward: 0.564; acc: 0.564
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 115: [evaluator update] loss: 1.196; reward: 0.573; acc: 0.573
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 116: [evaluator update] loss: 1.208; reward: 0.568; acc: 0.568
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 117: [evaluator update] loss: 1.204; reward: 0.568; acc: 0.568
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 118: [evaluator update] loss: 1.190; reward: 0.574; acc: 0.574
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 119: [evaluator update] loss: 1.198; reward: 0.570; acc: 0.570
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 120: [evaluator update] loss: 1.170; reward: 0.579; acc: 0.579
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 121: [evaluator update] loss: 1.184; reward: 0.577; acc: 0.577
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 122: [evaluator update] loss: 1.164; reward: 0.584; acc: 0.584
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 123: [evaluator update] loss: 1.159; reward: 0.584; acc: 0.584
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 124: [evaluator update] loss: 1.170; reward: 0.582; acc: 0.582
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 125: [evaluator update] loss: 1.166; reward: 0.584; acc: 0.584
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 126: [evaluator update] loss: 1.149; reward: 0.587; acc: 0.587
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 127: [evaluator update] loss: 1.142; reward: 0.592; acc: 0.592
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 128: [evaluator update] loss: 1.142; reward: 0.593; acc: 0.593
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 129: [evaluator update] loss: 1.139; reward: 0.591; acc: 0.591
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 130: [evaluator update] loss: 1.131; reward: 0.596; acc: 0.596
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 131: [evaluator update] loss: 1.123; reward: 0.599; acc: 0.599
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 132: [evaluator update] loss: 1.134; reward: 0.596; acc: 0.596
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 133: [evaluator update] loss: 1.132; reward: 0.594; acc: 0.594
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 134: [evaluator update] loss: 1.132; reward: 0.596; acc: 0.596
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 135: [evaluator update] loss: 1.127; reward: 0.598; acc: 0.598
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 136: [evaluator update] loss: 1.112; reward: 0.602; acc: 0.602
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 137: [evaluator update] loss: 1.113; reward: 0.601; acc: 0.601
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 138: [evaluator update] loss: 1.112; reward: 0.600; acc: 0.600
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 139: [evaluator update] loss: 1.107; reward: 0.603; acc: 0.603
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 140: [evaluator update] loss: 1.110; reward: 0.603; acc: 0.603
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 141: [evaluator update] loss: 1.119; reward: 0.599; acc: 0.599
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 142: [evaluator update] loss: 1.112; reward: 0.603; acc: 0.603
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 143: [evaluator update] loss: 1.126; reward: 0.598; acc: 0.598
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 144: [evaluator update] loss: 1.114; reward: 0.603; acc: 0.603
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 145: [evaluator update] loss: 1.120; reward: 0.598; acc: 0.598
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 146: [evaluator update] loss: 1.087; reward: 0.612; acc: 0.612
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 147: [evaluator update] loss: 1.094; reward: 0.609; acc: 0.609
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 148: [evaluator update] loss: 1.089; reward: 0.612; acc: 0.612
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 149: [evaluator update] loss: 1.095; reward: 0.610; acc: 0.610
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 150: [evaluator update] loss: 1.086; reward: 0.612; acc: 0.612
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 151: [evaluator update] loss: 1.085; reward: 0.612; acc: 0.612
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 152: [evaluator update] loss: 1.080; reward: 0.614; acc: 0.614
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 153: [evaluator update] loss: 1.076; reward: 0.619; acc: 0.619
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 154: [evaluator update] loss: 1.072; reward: 0.619; acc: 0.619
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 155: [evaluator update] loss: 1.081; reward: 0.611; acc: 0.611
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 156: [evaluator update] loss: 1.062; reward: 0.621; acc: 0.621
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 157: [evaluator update] loss: 1.049; reward: 0.624; acc: 0.624
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 158: [evaluator update] loss: 1.061; reward: 0.620; acc: 0.620
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 159: [evaluator update] loss: 1.060; reward: 0.624; acc: 0.624
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 160: [evaluator update] loss: 1.072; reward: 0.619; acc: 0.619
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 161: [evaluator update] loss: 1.042; reward: 0.629; acc: 0.629
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 162: [evaluator update] loss: 1.050; reward: 0.624; acc: 0.624
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 163: [evaluator update] loss: 1.060; reward: 0.623; acc: 0.623
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 164: [evaluator update] loss: 1.055; reward: 0.626; acc: 0.626
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 165: [evaluator update] loss: 1.047; reward: 0.627; acc: 0.627
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 166: [evaluator update] loss: 1.052; reward: 0.626; acc: 0.626
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 167: [evaluator update] loss: 1.049; reward: 0.625; acc: 0.625
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 168: [evaluator update] loss: 1.051; reward: 0.628; acc: 0.628
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 169: [evaluator update] loss: 1.037; reward: 0.630; acc: 0.630
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 170: [evaluator update] loss: 1.059; reward: 0.620; acc: 0.620
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 171: [evaluator update] loss: 1.031; reward: 0.632; acc: 0.632
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 172: [evaluator update] loss: 1.051; reward: 0.629; acc: 0.629
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 173: [evaluator update] loss: 1.064; reward: 0.622; acc: 0.622
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 174: [evaluator update] loss: 1.067; reward: 0.620; acc: 0.620
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 175: [evaluator update] loss: 1.040; reward: 0.631; acc: 0.631
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 176: [evaluator update] loss: 1.056; reward: 0.622; acc: 0.622
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 177: [evaluator update] loss: 1.043; reward: 0.628; acc: 0.628
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 178: [evaluator update] loss: 1.038; reward: 0.632; acc: 0.632
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 179: [evaluator update] loss: 1.016; reward: 0.642; acc: 0.642
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 180: [evaluator update] loss: 1.019; reward: 0.638; acc: 0.638
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 181: [evaluator update] loss: 1.032; reward: 0.634; acc: 0.634
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 182: [evaluator update] loss: 1.046; reward: 0.628; acc: 0.628
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 183: [evaluator update] loss: 1.025; reward: 0.636; acc: 0.636
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 184: [evaluator update] loss: 1.021; reward: 0.637; acc: 0.637
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 185: [evaluator update] loss: 1.024; reward: 0.635; acc: 0.635
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 186: [evaluator update] loss: 1.041; reward: 0.632; acc: 0.632
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 187: [evaluator update] loss: 1.023; reward: 0.636; acc: 0.636
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 188: [evaluator update] loss: 1.036; reward: 0.630; acc: 0.630
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 189: [evaluator update] loss: 1.036; reward: 0.634; acc: 0.634
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 190: [evaluator update] loss: 1.025; reward: 0.634; acc: 0.634
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 191: [evaluator update] loss: 1.056; reward: 0.628; acc: 0.628
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 192: [evaluator update] loss: 1.034; reward: 0.631; acc: 0.631
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 193: [evaluator update] loss: 1.041; reward: 0.632; acc: 0.632
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 194: [evaluator update] loss: 1.038; reward: 0.634; acc: 0.634
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 195: [evaluator update] loss: 1.015; reward: 0.640; acc: 0.640
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 196: [evaluator update] loss: 1.024; reward: 0.635; acc: 0.635
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 197: [evaluator update] loss: 1.044; reward: 0.631; acc: 0.631
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 198: [evaluator update] loss: 1.051; reward: 0.630; acc: 0.630
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 199: [evaluator update] loss: 1.034; reward: 0.634; acc: 0.634
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 200: [evaluator update] loss: 1.001; reward: 0.646; acc: 0.646
+SimpleTrainer       INFO: Epoch 200: Save all checkpoints to directory /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search/200/
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 201: [evaluator update] loss: 1.007; reward: 0.645; acc: 0.645
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 202: [evaluator update] loss: 1.005; reward: 0.643; acc: 0.643
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 203: [evaluator update] loss: 1.001; reward: 0.647; acc: 0.647
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 204: [evaluator update] loss: 1.005; reward: 0.646; acc: 0.646
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 205: [evaluator update] loss: 1.016; reward: 0.638; acc: 0.638
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 206: [evaluator update] loss: 1.010; reward: 0.641; acc: 0.641
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 207: [evaluator update] loss: 1.022; reward: 0.638; acc: 0.638
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 208: [evaluator update] loss: 1.019; reward: 0.639; acc: 0.639
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 209: [evaluator update] loss: 1.005; reward: 0.643; acc: 0.643
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 210: [evaluator update] loss: 1.006; reward: 0.640; acc: 0.640
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 211: [evaluator update] loss: 1.015; reward: 0.641; acc: 0.641
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 212: [evaluator update] loss: 1.006; reward: 0.642; acc: 0.642
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 213: [evaluator update] loss: 0.988; reward: 0.647; acc: 0.647
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 214: [evaluator update] loss: 0.988; reward: 0.651; acc: 0.651
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 215: [evaluator update] loss: 1.012; reward: 0.641; acc: 0.641
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 216: [evaluator update] loss: 1.059; reward: 0.624; acc: 0.624
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 217: [evaluator update] loss: 1.008; reward: 0.642; acc: 0.642
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 218: [evaluator update] loss: 1.008; reward: 0.645; acc: 0.645
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 219: [evaluator update] loss: 1.005; reward: 0.644; acc: 0.644
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 220: [evaluator update] loss: 0.985; reward: 0.651; acc: 0.651
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 221: [evaluator update] loss: 0.995; reward: 0.645; acc: 0.645
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 222: [evaluator update] loss: 0.995; reward: 0.646; acc: 0.646
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 223: [evaluator update] loss: 0.983; reward: 0.652; acc: 0.652
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 224: [evaluator update] loss: 0.989; reward: 0.652; acc: 0.652
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 225: [evaluator update] loss: 0.990; reward: 0.649; acc: 0.649
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 226: [evaluator update] loss: 0.985; reward: 0.652; acc: 0.652
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 227: [evaluator update] loss: 0.981; reward: 0.652; acc: 0.652
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 228: [evaluator update] loss: 0.992; reward: 0.647; acc: 0.647
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 229: [evaluator update] loss: 0.972; reward: 0.654; acc: 0.654
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 230: [evaluator update] loss: 0.980; reward: 0.654; acc: 0.654
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 231: [evaluator update] loss: 0.989; reward: 0.651; acc: 0.651
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 232: [evaluator update] loss: 0.973; reward: 0.655; acc: 0.655
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 233: [evaluator update] loss: 0.962; reward: 0.659; acc: 0.659
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 234: [evaluator update] loss: 0.951; reward: 0.665; acc: 0.665
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 235: [evaluator update] loss: 0.977; reward: 0.655; acc: 0.655
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 236: [evaluator update] loss: 0.968; reward: 0.657; acc: 0.657
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 237: [evaluator update] loss: 0.972; reward: 0.656; acc: 0.656
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 238: [evaluator update] loss: 0.957; reward: 0.660; acc: 0.660
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 239: [evaluator update] loss: 0.977; reward: 0.654; acc: 0.654
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 240: [evaluator update] loss: 0.960; reward: 0.660; acc: 0.660
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 241: [evaluator update] loss: 0.959; reward: 0.661; acc: 0.661
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 242: [evaluator update] loss: 0.959; reward: 0.661; acc: 0.661
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 243: [evaluator update] loss: 0.968; reward: 0.657; acc: 0.657
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 244: [evaluator update] loss: 0.945; reward: 0.664; acc: 0.664
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 245: [evaluator update] loss: 0.961; reward: 0.661; acc: 0.661
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 246: [evaluator update] loss: 0.973; reward: 0.660; acc: 0.660
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 247: [evaluator update] loss: 0.959; reward: 0.663; acc: 0.663
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 248: [evaluator update] loss: 0.948; reward: 0.666; acc: 0.666
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 249: [evaluator update] loss: 0.956; reward: 0.661; acc: 0.661
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 250: [evaluator update] loss: 0.949; reward: 0.665; acc: 0.665
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 251: [evaluator update] loss: 0.948; reward: 0.668; acc: 0.668
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 252: [evaluator update] loss: 0.946; reward: 0.664; acc: 0.664
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 253: [evaluator update] loss: 0.973; reward: 0.655; acc: 0.655
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 254: [evaluator update] loss: 0.947; reward: 0.666; acc: 0.666
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 255: [evaluator update] loss: 0.949; reward: 0.664; acc: 0.664
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 256: [evaluator update] loss: 0.955; reward: 0.663; acc: 0.663
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 257: [evaluator update] loss: 0.941; reward: 0.669; acc: 0.669
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 258: [evaluator update] loss: 0.935; reward: 0.670; acc: 0.670
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 259: [evaluator update] loss: 0.957; reward: 0.662; acc: 0.662
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 260: [evaluator update] loss: 0.942; reward: 0.664; acc: 0.664
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 261: [evaluator update] loss: 0.928; reward: 0.673; acc: 0.673
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 262: [evaluator update] loss: 0.949; reward: 0.663; acc: 0.663
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 263: [evaluator update] loss: 0.940; reward: 0.668; acc: 0.668
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 264: [evaluator update] loss: 0.935; reward: 0.669; acc: 0.669
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 265: [evaluator update] loss: 0.956; reward: 0.662; acc: 0.662
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 266: [evaluator update] loss: 0.939; reward: 0.668; acc: 0.668
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 267: [evaluator update] loss: 0.978; reward: 0.656; acc: 0.656
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 268: [evaluator update] loss: 0.955; reward: 0.666; acc: 0.666
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 269: [evaluator update] loss: 0.944; reward: 0.667; acc: 0.667
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 270: [evaluator update] loss: 0.973; reward: 0.656; acc: 0.656
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 271: [evaluator update] loss: 0.961; reward: 0.660; acc: 0.660
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 272: [evaluator update] loss: 0.942; reward: 0.664; acc: 0.664
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 273: [evaluator update] loss: 0.925; reward: 0.674; acc: 0.674
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 274: [evaluator update] loss: 0.946; reward: 0.665; acc: 0.665
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 275: [evaluator update] loss: 0.946; reward: 0.668; acc: 0.668
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 276: [evaluator update] loss: 0.926; reward: 0.673; acc: 0.673
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 277: [evaluator update] loss: 0.923; reward: 0.675; acc: 0.675
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 278: [evaluator update] loss: 0.942; reward: 0.667; acc: 0.667
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 279: [evaluator update] loss: 0.928; reward: 0.671; acc: 0.671
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 280: [evaluator update] loss: 0.962; reward: 0.661; acc: 0.661
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 281: [evaluator update] loss: 0.939; reward: 0.667; acc: 0.667
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 282: [evaluator update] loss: 0.927; reward: 0.670; acc: 0.670
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 283: [evaluator update] loss: 0.927; reward: 0.672; acc: 0.672
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 284: [evaluator update] loss: 0.921; reward: 0.674; acc: 0.674
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 285: [evaluator update] loss: 0.934; reward: 0.670; acc: 0.670
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 286: [evaluator update] loss: 0.928; reward: 0.672; acc: 0.672
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 287: [evaluator update] loss: 0.910; reward: 0.681; acc: 0.681
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 288: [evaluator update] loss: 0.930; reward: 0.671; acc: 0.671
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 289: [evaluator update] loss: 0.910; reward: 0.679; acc: 0.679
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 290: [evaluator update] loss: 0.927; reward: 0.673; acc: 0.673
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 291: [evaluator update] loss: 0.918; reward: 0.675; acc: 0.675
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 292: [evaluator update] loss: 0.973; reward: 0.655; acc: 0.655
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 293: [evaluator update] loss: 1.008; reward: 0.646; acc: 0.646
+MepaEvaluator       INFO: Schedule step   1: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 294: [evaluator update] loss: 0.965; reward: 0.659; acc: 0.659
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 295: [evaluator update] loss: 0.945; reward: 0.666; acc: 0.666
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 296: [evaluator update] loss: 0.944; reward: 0.668; acc: 0.668
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 297: [evaluator update] loss: 0.928; reward: 0.673; acc: 0.673
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 298: [evaluator update] loss: 0.941; reward: 0.670; acc: 0.670
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 299: [evaluator update] loss: 0.931; reward: 0.671; acc: 0.671
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 300: [evaluator update] loss: 0.964; reward: 0.660; acc: 0.660
+SimpleTrainer       INFO: Epoch 300: Save all checkpoints to directory /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search/300/
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 301: [evaluator update] loss: 0.931; reward: 0.673; acc: 0.673
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 302: [evaluator update] loss: 0.940; reward: 0.669; acc: 0.669
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 303: [evaluator update] loss: 0.946; reward: 0.666; acc: 0.666
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 304: [evaluator update] loss: 0.922; reward: 0.676; acc: 0.676
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 305: [evaluator update] loss: 0.927; reward: 0.676; acc: 0.676
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 306: [evaluator update] loss: 0.932; reward: 0.669; acc: 0.669
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 307: [evaluator update] loss: 0.922; reward: 0.674; acc: 0.674
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 308: [evaluator update] loss: 0.904; reward: 0.680; acc: 0.680
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 309: [evaluator update] loss: 0.924; reward: 0.674; acc: 0.674
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 310: [evaluator update] loss: 0.934; reward: 0.670; acc: 0.670
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 311: [evaluator update] loss: 0.936; reward: 0.670; acc: 0.670
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 312: [evaluator update] loss: 0.921; reward: 0.674; acc: 0.674
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 313: [evaluator update] loss: 0.937; reward: 0.670; acc: 0.670
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 314: [evaluator update] loss: 0.902; reward: 0.681; acc: 0.681
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 315: [evaluator update] loss: 0.913; reward: 0.679; acc: 0.679
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 316: [evaluator update] loss: 0.908; reward: 0.679; acc: 0.679
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 317: [evaluator update] loss: 0.903; reward: 0.683; acc: 0.683
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 318: [evaluator update] loss: 0.918; reward: 0.680; acc: 0.680
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 319: [evaluator update] loss: 0.884; reward: 0.690; acc: 0.690
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 320: [evaluator update] loss: 0.916; reward: 0.675; acc: 0.675
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 321: [evaluator update] loss: 0.903; reward: 0.683; acc: 0.683
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 322: [evaluator update] loss: 0.900; reward: 0.683; acc: 0.683
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 323: [evaluator update] loss: 0.911; reward: 0.679; acc: 0.679
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 324: [evaluator update] loss: 0.907; reward: 0.681; acc: 0.681
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 325: [evaluator update] loss: 0.905; reward: 0.683; acc: 0.683
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 326: [evaluator update] loss: 0.928; reward: 0.671; acc: 0.671
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 327: [evaluator update] loss: 0.916; reward: 0.676; acc: 0.676
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 328: [evaluator update] loss: 0.900; reward: 0.682; acc: 0.682
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 329: [evaluator update] loss: 0.899; reward: 0.685; acc: 0.685
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 330: [evaluator update] loss: 0.892; reward: 0.686; acc: 0.686
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 331: [evaluator update] loss: 0.903; reward: 0.681; acc: 0.681
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 332: [evaluator update] loss: 0.913; reward: 0.681; acc: 0.681
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 333: [evaluator update] loss: 0.876; reward: 0.691; acc: 0.691
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 334: [evaluator update] loss: 0.897; reward: 0.685; acc: 0.685
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 335: [evaluator update] loss: 0.895; reward: 0.685; acc: 0.685
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 336: [evaluator update] loss: 0.897; reward: 0.683; acc: 0.683
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 337: [evaluator update] loss: 0.895; reward: 0.683; acc: 0.683
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 338: [evaluator update] loss: 0.946; reward: 0.669; acc: 0.669
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 339: [evaluator update] loss: 0.890; reward: 0.687; acc: 0.687
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 340: [evaluator update] loss: 0.904; reward: 0.685; acc: 0.685
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 341: [evaluator update] loss: 0.913; reward: 0.679; acc: 0.679
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 342: [evaluator update] loss: 0.912; reward: 0.679; acc: 0.679
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 343: [evaluator update] loss: 0.889; reward: 0.686; acc: 0.686
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 344: [evaluator update] loss: 0.905; reward: 0.682; acc: 0.682
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 345: [evaluator update] loss: 0.896; reward: 0.681; acc: 0.681
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 346: [evaluator update] loss: 0.907; reward: 0.682; acc: 0.682
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 347: [evaluator update] loss: 0.900; reward: 0.685; acc: 0.685
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 348: [evaluator update] loss: 0.889; reward: 0.688; acc: 0.688
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 349: [evaluator update] loss: 0.912; reward: 0.679; acc: 0.679
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 350: [evaluator update] loss: 0.912; reward: 0.678; acc: 0.678
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 351: [evaluator update] loss: 0.910; reward: 0.677; acc: 0.677
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 352: [evaluator update] loss: 0.913; reward: 0.679; acc: 0.679
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 353: [evaluator update] loss: 0.903; reward: 0.684; acc: 0.684
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 354: [evaluator update] loss: 0.917; reward: 0.678; acc: 0.678
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 355: [evaluator update] loss: 0.953; reward: 0.666; acc: 0.666
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 356: [evaluator update] loss: 0.956; reward: 0.668; acc: 0.668
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 357: [evaluator update] loss: 0.928; reward: 0.672; acc: 0.672
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 358: [evaluator update] loss: 0.917; reward: 0.679; acc: 0.679
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 359: [evaluator update] loss: 0.934; reward: 0.672; acc: 0.672
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 360: [evaluator update] loss: 0.966; reward: 0.661; acc: 0.661
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 361: [evaluator update] loss: 0.932; reward: 0.673; acc: 0.673
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 362: [evaluator update] loss: 0.964; reward: 0.661; acc: 0.661
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 363: [evaluator update] loss: 0.956; reward: 0.664; acc: 0.664
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.05000; 
+SimpleTrainer       INFO: Epoch 364: [evaluator update] loss: 0.933; reward: 0.672; acc: 0.672
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 365: [evaluator update] loss: 0.897; reward: 0.685; acc: 0.685
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 366: [evaluator update] loss: 0.860; reward: 0.699; acc: 0.699
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 367: [evaluator update] loss: 0.846; reward: 0.703; acc: 0.703
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 368: [evaluator update] loss: 0.826; reward: 0.711; acc: 0.711
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 369: [evaluator update] loss: 0.838; reward: 0.705; acc: 0.705
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 370: [evaluator update] loss: 0.845; reward: 0.702; acc: 0.702
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 371: [evaluator update] loss: 0.822; reward: 0.713; acc: 0.713
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 372: [evaluator update] loss: 0.818; reward: 0.714; acc: 0.714
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 373: [evaluator update] loss: 0.800; reward: 0.720; acc: 0.720
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 374: [evaluator update] loss: 0.793; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 375: [evaluator update] loss: 0.818; reward: 0.713; acc: 0.713
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 376: [evaluator update] loss: 0.816; reward: 0.713; acc: 0.713
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 377: [evaluator update] loss: 0.786; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 378: [evaluator update] loss: 0.796; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 379: [evaluator update] loss: 0.823; reward: 0.710; acc: 0.710
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 380: [evaluator update] loss: 0.833; reward: 0.706; acc: 0.706
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 381: [evaluator update] loss: 0.800; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 382: [evaluator update] loss: 0.806; reward: 0.716; acc: 0.716
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 383: [evaluator update] loss: 0.812; reward: 0.716; acc: 0.716
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 384: [evaluator update] loss: 0.799; reward: 0.719; acc: 0.719
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 385: [evaluator update] loss: 0.814; reward: 0.712; acc: 0.712
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 386: [evaluator update] loss: 0.794; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 387: [evaluator update] loss: 0.812; reward: 0.715; acc: 0.715
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 388: [evaluator update] loss: 0.799; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 389: [evaluator update] loss: 0.802; reward: 0.715; acc: 0.715
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 390: [evaluator update] loss: 0.788; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 391: [evaluator update] loss: 0.804; reward: 0.718; acc: 0.718
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 392: [evaluator update] loss: 0.791; reward: 0.722; acc: 0.722
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 393: [evaluator update] loss: 0.793; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 394: [evaluator update] loss: 0.779; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 395: [evaluator update] loss: 0.797; reward: 0.720; acc: 0.720
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 396: [evaluator update] loss: 0.799; reward: 0.718; acc: 0.718
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 397: [evaluator update] loss: 0.786; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 398: [evaluator update] loss: 0.810; reward: 0.716; acc: 0.716
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 399: [evaluator update] loss: 0.787; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 400: [evaluator update] loss: 0.813; reward: 0.714; acc: 0.714
+SimpleTrainer       INFO: Epoch 400: Save all checkpoints to directory /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search/400/
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 401: [evaluator update] loss: 0.781; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 402: [evaluator update] loss: 0.785; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 403: [evaluator update] loss: 0.794; reward: 0.720; acc: 0.720
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 404: [evaluator update] loss: 0.785; reward: 0.722; acc: 0.722
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 405: [evaluator update] loss: 0.788; reward: 0.722; acc: 0.722
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 406: [evaluator update] loss: 0.788; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 407: [evaluator update] loss: 0.795; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 408: [evaluator update] loss: 0.798; reward: 0.719; acc: 0.719
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 409: [evaluator update] loss: 0.809; reward: 0.714; acc: 0.714
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 410: [evaluator update] loss: 0.818; reward: 0.714; acc: 0.714
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 411: [evaluator update] loss: 0.807; reward: 0.717; acc: 0.717
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 412: [evaluator update] loss: 0.796; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 413: [evaluator update] loss: 0.825; reward: 0.711; acc: 0.711
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 414: [evaluator update] loss: 0.784; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 415: [evaluator update] loss: 0.804; reward: 0.717; acc: 0.717
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 416: [evaluator update] loss: 0.797; reward: 0.720; acc: 0.720
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 417: [evaluator update] loss: 0.788; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 418: [evaluator update] loss: 0.811; reward: 0.715; acc: 0.715
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 419: [evaluator update] loss: 0.791; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 420: [evaluator update] loss: 0.808; reward: 0.713; acc: 0.713
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 421: [evaluator update] loss: 0.792; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 422: [evaluator update] loss: 0.789; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 423: [evaluator update] loss: 0.774; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 424: [evaluator update] loss: 0.791; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 425: [evaluator update] loss: 0.797; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 426: [evaluator update] loss: 0.810; reward: 0.715; acc: 0.715
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 427: [evaluator update] loss: 0.788; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 428: [evaluator update] loss: 0.786; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 429: [evaluator update] loss: 0.809; reward: 0.716; acc: 0.716
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 430: [evaluator update] loss: 0.773; reward: 0.730; acc: 0.730
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 431: [evaluator update] loss: 0.813; reward: 0.714; acc: 0.714
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 432: [evaluator update] loss: 0.798; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 433: [evaluator update] loss: 0.786; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 434: [evaluator update] loss: 0.779; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 435: [evaluator update] loss: 0.776; reward: 0.730; acc: 0.730
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 436: [evaluator update] loss: 0.778; reward: 0.726; acc: 0.726
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 437: [evaluator update] loss: 0.788; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 438: [evaluator update] loss: 0.788; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 439: [evaluator update] loss: 0.783; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 440: [evaluator update] loss: 0.789; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 441: [evaluator update] loss: 0.788; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 442: [evaluator update] loss: 0.799; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 443: [evaluator update] loss: 0.765; reward: 0.732; acc: 0.732
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 444: [evaluator update] loss: 0.784; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 445: [evaluator update] loss: 0.796; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 446: [evaluator update] loss: 0.794; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 447: [evaluator update] loss: 0.792; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 448: [evaluator update] loss: 0.782; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 449: [evaluator update] loss: 0.782; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 450: [evaluator update] loss: 0.774; reward: 0.729; acc: 0.729
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 451: [evaluator update] loss: 0.818; reward: 0.714; acc: 0.714
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 452: [evaluator update] loss: 0.791; reward: 0.722; acc: 0.722
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 453: [evaluator update] loss: 0.774; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 454: [evaluator update] loss: 0.785; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 455: [evaluator update] loss: 0.794; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 456: [evaluator update] loss: 0.788; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 457: [evaluator update] loss: 0.786; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 458: [evaluator update] loss: 0.781; reward: 0.726; acc: 0.726
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 459: [evaluator update] loss: 0.791; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 460: [evaluator update] loss: 0.799; reward: 0.721; acc: 0.721
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 461: [evaluator update] loss: 0.770; reward: 0.731; acc: 0.731
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 462: [evaluator update] loss: 0.773; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 463: [evaluator update] loss: 0.767; reward: 0.729; acc: 0.729
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 464: [evaluator update] loss: 0.784; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 465: [evaluator update] loss: 0.778; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 466: [evaluator update] loss: 0.775; reward: 0.729; acc: 0.729
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 467: [evaluator update] loss: 0.786; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 468: [evaluator update] loss: 0.771; reward: 0.729; acc: 0.729
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 469: [evaluator update] loss: 0.766; reward: 0.734; acc: 0.734
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 470: [evaluator update] loss: 0.790; reward: 0.722; acc: 0.722
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 471: [evaluator update] loss: 0.762; reward: 0.733; acc: 0.733
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 472: [evaluator update] loss: 0.795; reward: 0.722; acc: 0.722
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 473: [evaluator update] loss: 0.786; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 474: [evaluator update] loss: 0.790; reward: 0.722; acc: 0.722
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 475: [evaluator update] loss: 0.765; reward: 0.732; acc: 0.732
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 476: [evaluator update] loss: 0.774; reward: 0.730; acc: 0.730
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 477: [evaluator update] loss: 0.769; reward: 0.734; acc: 0.734
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 478: [evaluator update] loss: 0.775; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 479: [evaluator update] loss: 0.773; reward: 0.727; acc: 0.727
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 480: [evaluator update] loss: 0.777; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 481: [evaluator update] loss: 0.779; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 482: [evaluator update] loss: 0.787; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 483: [evaluator update] loss: 0.783; reward: 0.726; acc: 0.726
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 484: [evaluator update] loss: 0.763; reward: 0.733; acc: 0.733
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 485: [evaluator update] loss: 0.770; reward: 0.732; acc: 0.732
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 486: [evaluator update] loss: 0.779; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 487: [evaluator update] loss: 0.763; reward: 0.733; acc: 0.733
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 488: [evaluator update] loss: 0.784; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 489: [evaluator update] loss: 0.780; reward: 0.727; acc: 0.727
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 490: [evaluator update] loss: 0.778; reward: 0.729; acc: 0.729
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 491: [evaluator update] loss: 0.780; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 492: [evaluator update] loss: 0.773; reward: 0.731; acc: 0.731
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 493: [evaluator update] loss: 0.787; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 494: [evaluator update] loss: 0.758; reward: 0.734; acc: 0.734
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 495: [evaluator update] loss: 0.787; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 496: [evaluator update] loss: 0.776; reward: 0.730; acc: 0.730
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 497: [evaluator update] loss: 0.756; reward: 0.737; acc: 0.737
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 498: [evaluator update] loss: 0.773; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 499: [evaluator update] loss: 0.757; reward: 0.736; acc: 0.736
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 500: [evaluator update] loss: 0.765; reward: 0.731; acc: 0.731
+SimpleTrainer       INFO: Epoch 500: Save all checkpoints to directory /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search/500/
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 501: [evaluator update] loss: 0.777; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 502: [evaluator update] loss: 0.785; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 503: [evaluator update] loss: 0.774; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 504: [evaluator update] loss: 0.766; reward: 0.732; acc: 0.732
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 505: [evaluator update] loss: 0.766; reward: 0.729; acc: 0.729
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 506: [evaluator update] loss: 0.766; reward: 0.733; acc: 0.733
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 507: [evaluator update] loss: 0.776; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 508: [evaluator update] loss: 0.756; reward: 0.732; acc: 0.732
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 509: [evaluator update] loss: 0.751; reward: 0.735; acc: 0.735
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 510: [evaluator update] loss: 0.765; reward: 0.731; acc: 0.731
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 511: [evaluator update] loss: 0.734; reward: 0.742; acc: 0.742
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 512: [evaluator update] loss: 0.769; reward: 0.729; acc: 0.729
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 513: [evaluator update] loss: 0.746; reward: 0.739; acc: 0.739
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 514: [evaluator update] loss: 0.748; reward: 0.739; acc: 0.739
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 515: [evaluator update] loss: 0.754; reward: 0.735; acc: 0.735
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 516: [evaluator update] loss: 0.788; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 517: [evaluator update] loss: 0.765; reward: 0.732; acc: 0.732
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 518: [evaluator update] loss: 0.756; reward: 0.737; acc: 0.737
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 519: [evaluator update] loss: 0.780; reward: 0.726; acc: 0.726
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 520: [evaluator update] loss: 0.764; reward: 0.733; acc: 0.733
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 521: [evaluator update] loss: 0.769; reward: 0.730; acc: 0.730
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 522: [evaluator update] loss: 0.792; reward: 0.723; acc: 0.723
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 523: [evaluator update] loss: 0.781; reward: 0.727; acc: 0.727
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 524: [evaluator update] loss: 0.786; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 525: [evaluator update] loss: 0.806; reward: 0.718; acc: 0.718
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 526: [evaluator update] loss: 0.806; reward: 0.717; acc: 0.717
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 527: [evaluator update] loss: 0.774; reward: 0.731; acc: 0.731
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 528: [evaluator update] loss: 0.761; reward: 0.732; acc: 0.732
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 529: [evaluator update] loss: 0.782; reward: 0.726; acc: 0.726
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 530: [evaluator update] loss: 0.787; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 531: [evaluator update] loss: 0.781; reward: 0.727; acc: 0.727
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 532: [evaluator update] loss: 0.777; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 533: [evaluator update] loss: 0.784; reward: 0.724; acc: 0.724
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 534: [evaluator update] loss: 0.770; reward: 0.729; acc: 0.729
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 535: [evaluator update] loss: 0.787; reward: 0.725; acc: 0.725
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 536: [evaluator update] loss: 0.771; reward: 0.731; acc: 0.731
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 537: [evaluator update] loss: 0.754; reward: 0.736; acc: 0.736
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 538: [evaluator update] loss: 0.777; reward: 0.728; acc: 0.728
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 539: [evaluator update] loss: 0.767; reward: 0.732; acc: 0.732
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 540: [evaluator update] loss: 0.752; reward: 0.739; acc: 0.739
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 541: [evaluator update] loss: 0.754; reward: 0.735; acc: 0.735
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.02500; 
+SimpleTrainer       INFO: Epoch 542: [evaluator update] loss: 0.780; reward: 0.727; acc: 0.727
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 543: [evaluator update] loss: 0.723; reward: 0.746; acc: 0.746
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 544: [evaluator update] loss: 0.698; reward: 0.756; acc: 0.756
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 545: [evaluator update] loss: 0.683; reward: 0.761; acc: 0.761
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 546: [evaluator update] loss: 0.701; reward: 0.755; acc: 0.755
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 547: [evaluator update] loss: 0.701; reward: 0.755; acc: 0.755
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 548: [evaluator update] loss: 0.700; reward: 0.755; acc: 0.755
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 549: [evaluator update] loss: 0.688; reward: 0.759; acc: 0.759
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 550: [evaluator update] loss: 0.698; reward: 0.757; acc: 0.757
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 551: [evaluator update] loss: 0.685; reward: 0.761; acc: 0.761
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 552: [evaluator update] loss: 0.702; reward: 0.756; acc: 0.756
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 553: [evaluator update] loss: 0.684; reward: 0.759; acc: 0.759
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 554: [evaluator update] loss: 0.694; reward: 0.757; acc: 0.757
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 555: [evaluator update] loss: 0.673; reward: 0.765; acc: 0.765
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 556: [evaluator update] loss: 0.682; reward: 0.760; acc: 0.760
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 557: [evaluator update] loss: 0.722; reward: 0.746; acc: 0.746
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 558: [evaluator update] loss: 0.686; reward: 0.761; acc: 0.761
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 559: [evaluator update] loss: 0.687; reward: 0.759; acc: 0.759
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 560: [evaluator update] loss: 0.689; reward: 0.757; acc: 0.757
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 561: [evaluator update] loss: 0.667; reward: 0.766; acc: 0.766
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 562: [evaluator update] loss: 0.680; reward: 0.764; acc: 0.764
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 563: [evaluator update] loss: 0.693; reward: 0.758; acc: 0.758
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 564: [evaluator update] loss: 0.666; reward: 0.768; acc: 0.768
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 565: [evaluator update] loss: 0.683; reward: 0.760; acc: 0.760
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 566: [evaluator update] loss: 0.683; reward: 0.764; acc: 0.764
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 567: [evaluator update] loss: 0.683; reward: 0.762; acc: 0.762
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 568: [evaluator update] loss: 0.688; reward: 0.759; acc: 0.759
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 569: [evaluator update] loss: 0.675; reward: 0.765; acc: 0.765
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 570: [evaluator update] loss: 0.702; reward: 0.756; acc: 0.756
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 571: [evaluator update] loss: 0.677; reward: 0.764; acc: 0.764
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 572: [evaluator update] loss: 0.691; reward: 0.759; acc: 0.759
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 573: [evaluator update] loss: 0.695; reward: 0.757; acc: 0.757
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 574: [evaluator update] loss: 0.685; reward: 0.761; acc: 0.761
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 575: [evaluator update] loss: 0.678; reward: 0.761; acc: 0.761
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 576: [evaluator update] loss: 0.711; reward: 0.751; acc: 0.751
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 577: [evaluator update] loss: 0.665; reward: 0.767; acc: 0.767
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 578: [evaluator update] loss: 0.679; reward: 0.763; acc: 0.763
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 579: [evaluator update] loss: 0.676; reward: 0.763; acc: 0.763
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 580: [evaluator update] loss: 0.688; reward: 0.760; acc: 0.760
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 581: [evaluator update] loss: 0.679; reward: 0.763; acc: 0.763
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 582: [evaluator update] loss: 0.694; reward: 0.757; acc: 0.757
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 583: [evaluator update] loss: 0.677; reward: 0.760; acc: 0.760
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 584: [evaluator update] loss: 0.674; reward: 0.762; acc: 0.762
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 585: [evaluator update] loss: 0.659; reward: 0.769; acc: 0.769
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 586: [evaluator update] loss: 0.677; reward: 0.765; acc: 0.765
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 587: [evaluator update] loss: 0.670; reward: 0.765; acc: 0.765
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 588: [evaluator update] loss: 0.684; reward: 0.759; acc: 0.759
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 589: [evaluator update] loss: 0.694; reward: 0.757; acc: 0.757
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 590: [evaluator update] loss: 0.689; reward: 0.758; acc: 0.758
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 591: [evaluator update] loss: 0.668; reward: 0.766; acc: 0.766
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 592: [evaluator update] loss: 0.673; reward: 0.766; acc: 0.766
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 593: [evaluator update] loss: 0.698; reward: 0.755; acc: 0.755
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 594: [evaluator update] loss: 0.677; reward: 0.763; acc: 0.763
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 595: [evaluator update] loss: 0.673; reward: 0.764; acc: 0.764
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 596: [evaluator update] loss: 0.677; reward: 0.762; acc: 0.762
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 597: [evaluator update] loss: 0.690; reward: 0.759; acc: 0.759
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 598: [evaluator update] loss: 0.688; reward: 0.759; acc: 0.759
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 599: [evaluator update] loss: 0.682; reward: 0.762; acc: 0.762
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 600: [evaluator update] loss: 0.685; reward: 0.764; acc: 0.764
+SimpleTrainer       INFO: Epoch 600: Save all checkpoints to directory /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search/600/
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 601: [evaluator update] loss: 0.662; reward: 0.766; acc: 0.766
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 602: [evaluator update] loss: 0.681; reward: 0.762; acc: 0.762
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 603: [evaluator update] loss: 0.695; reward: 0.756; acc: 0.756
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 604: [evaluator update] loss: 0.678; reward: 0.762; acc: 0.762
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 605: [evaluator update] loss: 0.678; reward: 0.762; acc: 0.762
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 606: [evaluator update] loss: 0.680; reward: 0.763; acc: 0.763
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 607: [evaluator update] loss: 0.680; reward: 0.763; acc: 0.763
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 608: [evaluator update] loss: 0.697; reward: 0.757; acc: 0.757
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 609: [evaluator update] loss: 0.680; reward: 0.763; acc: 0.763
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 610: [evaluator update] loss: 0.677; reward: 0.763; acc: 0.763
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 611: [evaluator update] loss: 0.671; reward: 0.766; acc: 0.766
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 612: [evaluator update] loss: 0.689; reward: 0.758; acc: 0.758
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 613: [evaluator update] loss: 0.680; reward: 0.764; acc: 0.764
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 614: [evaluator update] loss: 0.675; reward: 0.765; acc: 0.765
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 615: [evaluator update] loss: 0.674; reward: 0.766; acc: 0.766
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.01250; 
+SimpleTrainer       INFO: Epoch 616: [evaluator update] loss: 0.696; reward: 0.756; acc: 0.756
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 617: [evaluator update] loss: 0.653; reward: 0.771; acc: 0.771
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 618: [evaluator update] loss: 0.658; reward: 0.770; acc: 0.770
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 619: [evaluator update] loss: 0.631; reward: 0.779; acc: 0.779
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 620: [evaluator update] loss: 0.664; reward: 0.770; acc: 0.770
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 621: [evaluator update] loss: 0.631; reward: 0.779; acc: 0.779
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 622: [evaluator update] loss: 0.625; reward: 0.781; acc: 0.781
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 623: [evaluator update] loss: 0.633; reward: 0.778; acc: 0.778
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 624: [evaluator update] loss: 0.632; reward: 0.778; acc: 0.778
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 625: [evaluator update] loss: 0.641; reward: 0.777; acc: 0.777
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 626: [evaluator update] loss: 0.634; reward: 0.780; acc: 0.780
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 627: [evaluator update] loss: 0.628; reward: 0.779; acc: 0.779
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 628: [evaluator update] loss: 0.638; reward: 0.779; acc: 0.779
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 629: [evaluator update] loss: 0.617; reward: 0.784; acc: 0.784
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 630: [evaluator update] loss: 0.629; reward: 0.781; acc: 0.781
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 631: [evaluator update] loss: 0.625; reward: 0.781; acc: 0.781
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 632: [evaluator update] loss: 0.626; reward: 0.784; acc: 0.784
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 633: [evaluator update] loss: 0.624; reward: 0.782; acc: 0.782
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 634: [evaluator update] loss: 0.633; reward: 0.779; acc: 0.779
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 635: [evaluator update] loss: 0.627; reward: 0.783; acc: 0.783
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 636: [evaluator update] loss: 0.596; reward: 0.793; acc: 0.793
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 637: [evaluator update] loss: 0.623; reward: 0.782; acc: 0.782
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 638: [evaluator update] loss: 0.620; reward: 0.785; acc: 0.785
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 639: [evaluator update] loss: 0.624; reward: 0.783; acc: 0.783
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 640: [evaluator update] loss: 0.616; reward: 0.784; acc: 0.784
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 641: [evaluator update] loss: 0.624; reward: 0.784; acc: 0.784
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 642: [evaluator update] loss: 0.614; reward: 0.785; acc: 0.785
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 643: [evaluator update] loss: 0.607; reward: 0.789; acc: 0.789
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 644: [evaluator update] loss: 0.631; reward: 0.780; acc: 0.780
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 645: [evaluator update] loss: 0.609; reward: 0.789; acc: 0.789
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 646: [evaluator update] loss: 0.636; reward: 0.778; acc: 0.778
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 647: [evaluator update] loss: 0.616; reward: 0.786; acc: 0.786
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 648: [evaluator update] loss: 0.621; reward: 0.784; acc: 0.784
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 649: [evaluator update] loss: 0.628; reward: 0.780; acc: 0.780
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 650: [evaluator update] loss: 0.627; reward: 0.782; acc: 0.782
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 651: [evaluator update] loss: 0.622; reward: 0.784; acc: 0.784
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 652: [evaluator update] loss: 0.619; reward: 0.786; acc: 0.786
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 653: [evaluator update] loss: 0.622; reward: 0.784; acc: 0.784
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 654: [evaluator update] loss: 0.604; reward: 0.790; acc: 0.790
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 655: [evaluator update] loss: 0.628; reward: 0.780; acc: 0.780
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 656: [evaluator update] loss: 0.603; reward: 0.789; acc: 0.789
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 657: [evaluator update] loss: 0.625; reward: 0.783; acc: 0.783
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 658: [evaluator update] loss: 0.618; reward: 0.785; acc: 0.785
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 659: [evaluator update] loss: 0.610; reward: 0.789; acc: 0.789
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 660: [evaluator update] loss: 0.621; reward: 0.784; acc: 0.784
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 661: [evaluator update] loss: 0.609; reward: 0.788; acc: 0.788
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 662: [evaluator update] loss: 0.611; reward: 0.786; acc: 0.786
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 663: [evaluator update] loss: 0.594; reward: 0.794; acc: 0.794
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 664: [evaluator update] loss: 0.609; reward: 0.789; acc: 0.789
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 665: [evaluator update] loss: 0.613; reward: 0.786; acc: 0.786
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 666: [evaluator update] loss: 0.616; reward: 0.785; acc: 0.785
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 667: [evaluator update] loss: 0.611; reward: 0.788; acc: 0.788
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 668: [evaluator update] loss: 0.618; reward: 0.784; acc: 0.784
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 669: [evaluator update] loss: 0.598; reward: 0.792; acc: 0.792
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 670: [evaluator update] loss: 0.625; reward: 0.780; acc: 0.780
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 671: [evaluator update] loss: 0.602; reward: 0.790; acc: 0.790
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 672: [evaluator update] loss: 0.624; reward: 0.782; acc: 0.782
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 673: [evaluator update] loss: 0.630; reward: 0.781; acc: 0.781
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 674: [evaluator update] loss: 0.609; reward: 0.787; acc: 0.787
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 675: [evaluator update] loss: 0.612; reward: 0.786; acc: 0.786
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 676: [evaluator update] loss: 0.618; reward: 0.782; acc: 0.782
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 677: [evaluator update] loss: 0.599; reward: 0.791; acc: 0.791
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 678: [evaluator update] loss: 0.627; reward: 0.783; acc: 0.783
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 679: [evaluator update] loss: 0.609; reward: 0.789; acc: 0.789
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 680: [evaluator update] loss: 0.606; reward: 0.788; acc: 0.788
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 681: [evaluator update] loss: 0.625; reward: 0.784; acc: 0.784
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 682: [evaluator update] loss: 0.607; reward: 0.788; acc: 0.788
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 683: [evaluator update] loss: 0.605; reward: 0.790; acc: 0.790
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 684: [evaluator update] loss: 0.609; reward: 0.787; acc: 0.787
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 685: [evaluator update] loss: 0.615; reward: 0.787; acc: 0.787
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 686: [evaluator update] loss: 0.618; reward: 0.783; acc: 0.783
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 687: [evaluator update] loss: 0.610; reward: 0.785; acc: 0.785
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 688: [evaluator update] loss: 0.627; reward: 0.782; acc: 0.782
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 689: [evaluator update] loss: 0.612; reward: 0.787; acc: 0.787
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 690: [evaluator update] loss: 0.603; reward: 0.790; acc: 0.790
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 691: [evaluator update] loss: 0.607; reward: 0.787; acc: 0.787
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 692: [evaluator update] loss: 0.613; reward: 0.787; acc: 0.787
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 693: [evaluator update] loss: 0.620; reward: 0.782; acc: 0.782
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00625; 
+SimpleTrainer       INFO: Epoch 694: [evaluator update] loss: 0.616; reward: 0.785; acc: 0.785
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 695: [evaluator update] loss: 0.607; reward: 0.788; acc: 0.788
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 696: [evaluator update] loss: 0.598; reward: 0.791; acc: 0.791
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 697: [evaluator update] loss: 0.610; reward: 0.786; acc: 0.786
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 698: [evaluator update] loss: 0.597; reward: 0.791; acc: 0.791
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 699: [evaluator update] loss: 0.584; reward: 0.796; acc: 0.796
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 700: [evaluator update] loss: 0.593; reward: 0.794; acc: 0.794
+SimpleTrainer       INFO: Epoch 700: Save all checkpoints to directory /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search/700/
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 701: [evaluator update] loss: 0.581; reward: 0.796; acc: 0.796
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 702: [evaluator update] loss: 0.583; reward: 0.796; acc: 0.796
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 703: [evaluator update] loss: 0.573; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 704: [evaluator update] loss: 0.587; reward: 0.795; acc: 0.795
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 705: [evaluator update] loss: 0.574; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 706: [evaluator update] loss: 0.596; reward: 0.792; acc: 0.792
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 707: [evaluator update] loss: 0.576; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 708: [evaluator update] loss: 0.581; reward: 0.796; acc: 0.796
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 709: [evaluator update] loss: 0.588; reward: 0.794; acc: 0.794
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 710: [evaluator update] loss: 0.580; reward: 0.798; acc: 0.798
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 711: [evaluator update] loss: 0.581; reward: 0.796; acc: 0.796
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 712: [evaluator update] loss: 0.582; reward: 0.798; acc: 0.798
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 713: [evaluator update] loss: 0.563; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 714: [evaluator update] loss: 0.574; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 715: [evaluator update] loss: 0.590; reward: 0.794; acc: 0.794
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 716: [evaluator update] loss: 0.570; reward: 0.802; acc: 0.802
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 717: [evaluator update] loss: 0.557; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 718: [evaluator update] loss: 0.586; reward: 0.796; acc: 0.796
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 719: [evaluator update] loss: 0.577; reward: 0.797; acc: 0.797
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 720: [evaluator update] loss: 0.560; reward: 0.804; acc: 0.804
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 721: [evaluator update] loss: 0.588; reward: 0.797; acc: 0.797
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 722: [evaluator update] loss: 0.577; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 723: [evaluator update] loss: 0.569; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 724: [evaluator update] loss: 0.559; reward: 0.804; acc: 0.804
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 725: [evaluator update] loss: 0.559; reward: 0.804; acc: 0.804
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 726: [evaluator update] loss: 0.592; reward: 0.794; acc: 0.794
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 727: [evaluator update] loss: 0.564; reward: 0.802; acc: 0.802
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 728: [evaluator update] loss: 0.561; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 729: [evaluator update] loss: 0.571; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 730: [evaluator update] loss: 0.573; reward: 0.799; acc: 0.799
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 731: [evaluator update] loss: 0.569; reward: 0.801; acc: 0.801
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 732: [evaluator update] loss: 0.573; reward: 0.798; acc: 0.798
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 733: [evaluator update] loss: 0.563; reward: 0.805; acc: 0.805
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 734: [evaluator update] loss: 0.581; reward: 0.797; acc: 0.797
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 735: [evaluator update] loss: 0.574; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 736: [evaluator update] loss: 0.573; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 737: [evaluator update] loss: 0.564; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 738: [evaluator update] loss: 0.565; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 739: [evaluator update] loss: 0.577; reward: 0.796; acc: 0.796
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 740: [evaluator update] loss: 0.556; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 741: [evaluator update] loss: 0.567; reward: 0.801; acc: 0.801
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 742: [evaluator update] loss: 0.566; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 743: [evaluator update] loss: 0.561; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 744: [evaluator update] loss: 0.573; reward: 0.802; acc: 0.802
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 745: [evaluator update] loss: 0.576; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 746: [evaluator update] loss: 0.593; reward: 0.793; acc: 0.793
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 747: [evaluator update] loss: 0.563; reward: 0.804; acc: 0.804
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 748: [evaluator update] loss: 0.565; reward: 0.801; acc: 0.801
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 749: [evaluator update] loss: 0.579; reward: 0.797; acc: 0.797
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 750: [evaluator update] loss: 0.557; reward: 0.804; acc: 0.804
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 751: [evaluator update] loss: 0.573; reward: 0.799; acc: 0.799
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 752: [evaluator update] loss: 0.574; reward: 0.799; acc: 0.799
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 753: [evaluator update] loss: 0.597; reward: 0.791; acc: 0.791
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 754: [evaluator update] loss: 0.574; reward: 0.801; acc: 0.801
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 755: [evaluator update] loss: 0.550; reward: 0.808; acc: 0.808
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 756: [evaluator update] loss: 0.568; reward: 0.801; acc: 0.801
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 757: [evaluator update] loss: 0.588; reward: 0.794; acc: 0.794
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 758: [evaluator update] loss: 0.608; reward: 0.788; acc: 0.788
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 759: [evaluator update] loss: 0.591; reward: 0.794; acc: 0.794
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 760: [evaluator update] loss: 0.595; reward: 0.792; acc: 0.792
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 761: [evaluator update] loss: 0.557; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 762: [evaluator update] loss: 0.587; reward: 0.796; acc: 0.796
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 763: [evaluator update] loss: 0.594; reward: 0.792; acc: 0.792
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 764: [evaluator update] loss: 0.589; reward: 0.792; acc: 0.792
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 765: [evaluator update] loss: 0.590; reward: 0.794; acc: 0.794
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 766: [evaluator update] loss: 0.581; reward: 0.797; acc: 0.797
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 767: [evaluator update] loss: 0.594; reward: 0.793; acc: 0.793
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 768: [evaluator update] loss: 0.603; reward: 0.790; acc: 0.790
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 769: [evaluator update] loss: 0.594; reward: 0.793; acc: 0.793
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 770: [evaluator update] loss: 0.586; reward: 0.797; acc: 0.797
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 771: [evaluator update] loss: 0.577; reward: 0.799; acc: 0.799
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 772: [evaluator update] loss: 0.557; reward: 0.804; acc: 0.804
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 773: [evaluator update] loss: 0.597; reward: 0.794; acc: 0.794
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 774: [evaluator update] loss: 0.591; reward: 0.795; acc: 0.795
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 775: [evaluator update] loss: 0.600; reward: 0.790; acc: 0.790
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 776: [evaluator update] loss: 0.572; reward: 0.800; acc: 0.800
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 777: [evaluator update] loss: 0.563; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 778: [evaluator update] loss: 0.609; reward: 0.788; acc: 0.788
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 779: [evaluator update] loss: 0.593; reward: 0.796; acc: 0.796
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 780: [evaluator update] loss: 0.571; reward: 0.798; acc: 0.798
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 781: [evaluator update] loss: 0.581; reward: 0.798; acc: 0.798
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 782: [evaluator update] loss: 0.583; reward: 0.796; acc: 0.796
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 783: [evaluator update] loss: 0.593; reward: 0.794; acc: 0.794
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 784: [evaluator update] loss: 0.582; reward: 0.798; acc: 0.798
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 785: [evaluator update] loss: 0.578; reward: 0.799; acc: 0.799
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00313; 
+SimpleTrainer       INFO: Epoch 786: [evaluator update] loss: 0.568; reward: 0.801; acc: 0.801
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 787: [evaluator update] loss: 0.573; reward: 0.799; acc: 0.799
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 788: [evaluator update] loss: 0.561; reward: 0.804; acc: 0.804
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 789: [evaluator update] loss: 0.560; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 790: [evaluator update] loss: 0.567; reward: 0.801; acc: 0.801
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 791: [evaluator update] loss: 0.578; reward: 0.798; acc: 0.798
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 792: [evaluator update] loss: 0.569; reward: 0.801; acc: 0.801
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 793: [evaluator update] loss: 0.543; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 794: [evaluator update] loss: 0.555; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 795: [evaluator update] loss: 0.544; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 796: [evaluator update] loss: 0.564; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 797: [evaluator update] loss: 0.554; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 798: [evaluator update] loss: 0.558; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 799: [evaluator update] loss: 0.564; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 800: [evaluator update] loss: 0.549; reward: 0.811; acc: 0.811
+SimpleTrainer       INFO: Epoch 800: Save all checkpoints to directory /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search/800/
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 801: [evaluator update] loss: 0.564; reward: 0.804; acc: 0.804
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 802: [evaluator update] loss: 0.549; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 803: [evaluator update] loss: 0.549; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 804: [evaluator update] loss: 0.543; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 805: [evaluator update] loss: 0.537; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 806: [evaluator update] loss: 0.557; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 807: [evaluator update] loss: 0.543; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 808: [evaluator update] loss: 0.540; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 809: [evaluator update] loss: 0.562; reward: 0.802; acc: 0.802
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 810: [evaluator update] loss: 0.566; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 811: [evaluator update] loss: 0.564; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 812: [evaluator update] loss: 0.553; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 813: [evaluator update] loss: 0.551; reward: 0.809; acc: 0.809
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 814: [evaluator update] loss: 0.544; reward: 0.809; acc: 0.809
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 815: [evaluator update] loss: 0.555; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 816: [evaluator update] loss: 0.559; reward: 0.805; acc: 0.805
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 817: [evaluator update] loss: 0.550; reward: 0.808; acc: 0.808
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 818: [evaluator update] loss: 0.558; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 819: [evaluator update] loss: 0.553; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 820: [evaluator update] loss: 0.575; reward: 0.798; acc: 0.798
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 821: [evaluator update] loss: 0.542; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 822: [evaluator update] loss: 0.564; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 823: [evaluator update] loss: 0.541; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 824: [evaluator update] loss: 0.562; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 825: [evaluator update] loss: 0.533; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 826: [evaluator update] loss: 0.543; reward: 0.809; acc: 0.809
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 827: [evaluator update] loss: 0.545; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 828: [evaluator update] loss: 0.544; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 829: [evaluator update] loss: 0.537; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 830: [evaluator update] loss: 0.544; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 831: [evaluator update] loss: 0.546; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 832: [evaluator update] loss: 0.545; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 833: [evaluator update] loss: 0.542; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 834: [evaluator update] loss: 0.536; reward: 0.813; acc: 0.813
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 835: [evaluator update] loss: 0.539; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 836: [evaluator update] loss: 0.535; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 837: [evaluator update] loss: 0.532; reward: 0.815; acc: 0.815
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 838: [evaluator update] loss: 0.539; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 839: [evaluator update] loss: 0.549; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 840: [evaluator update] loss: 0.540; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 841: [evaluator update] loss: 0.571; reward: 0.802; acc: 0.802
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 842: [evaluator update] loss: 0.562; reward: 0.805; acc: 0.805
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 843: [evaluator update] loss: 0.536; reward: 0.813; acc: 0.813
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 844: [evaluator update] loss: 0.535; reward: 0.813; acc: 0.813
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 845: [evaluator update] loss: 0.536; reward: 0.813; acc: 0.813
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 846: [evaluator update] loss: 0.546; reward: 0.809; acc: 0.809
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 847: [evaluator update] loss: 0.529; reward: 0.814; acc: 0.814
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 848: [evaluator update] loss: 0.547; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 849: [evaluator update] loss: 0.519; reward: 0.821; acc: 0.821
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 850: [evaluator update] loss: 0.537; reward: 0.814; acc: 0.814
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 851: [evaluator update] loss: 0.546; reward: 0.809; acc: 0.809
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 852: [evaluator update] loss: 0.560; reward: 0.804; acc: 0.804
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 853: [evaluator update] loss: 0.558; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 854: [evaluator update] loss: 0.543; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 855: [evaluator update] loss: 0.536; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 856: [evaluator update] loss: 0.557; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 857: [evaluator update] loss: 0.540; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 858: [evaluator update] loss: 0.536; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 859: [evaluator update] loss: 0.529; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 860: [evaluator update] loss: 0.561; reward: 0.804; acc: 0.804
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 861: [evaluator update] loss: 0.542; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 862: [evaluator update] loss: 0.557; reward: 0.805; acc: 0.805
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 863: [evaluator update] loss: 0.560; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 864: [evaluator update] loss: 0.515; reward: 0.821; acc: 0.821
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 865: [evaluator update] loss: 0.553; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 866: [evaluator update] loss: 0.541; reward: 0.813; acc: 0.813
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 867: [evaluator update] loss: 0.551; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 868: [evaluator update] loss: 0.552; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 869: [evaluator update] loss: 0.529; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 870: [evaluator update] loss: 0.561; reward: 0.805; acc: 0.805
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 871: [evaluator update] loss: 0.559; reward: 0.805; acc: 0.805
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 872: [evaluator update] loss: 0.543; reward: 0.814; acc: 0.814
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 873: [evaluator update] loss: 0.539; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 874: [evaluator update] loss: 0.544; reward: 0.809; acc: 0.809
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 875: [evaluator update] loss: 0.554; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 876: [evaluator update] loss: 0.540; reward: 0.813; acc: 0.813
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 877: [evaluator update] loss: 0.555; reward: 0.805; acc: 0.805
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 878: [evaluator update] loss: 0.568; reward: 0.802; acc: 0.802
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 879: [evaluator update] loss: 0.564; reward: 0.803; acc: 0.803
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 880: [evaluator update] loss: 0.529; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 881: [evaluator update] loss: 0.535; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 882: [evaluator update] loss: 0.545; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 883: [evaluator update] loss: 0.556; reward: 0.807; acc: 0.807
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 884: [evaluator update] loss: 0.543; reward: 0.809; acc: 0.809
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 885: [evaluator update] loss: 0.522; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 886: [evaluator update] loss: 0.550; reward: 0.809; acc: 0.809
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 887: [evaluator update] loss: 0.519; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 888: [evaluator update] loss: 0.554; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 889: [evaluator update] loss: 0.530; reward: 0.815; acc: 0.815
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 890: [evaluator update] loss: 0.557; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 891: [evaluator update] loss: 0.543; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 892: [evaluator update] loss: 0.559; reward: 0.802; acc: 0.802
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 893: [evaluator update] loss: 0.520; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 894: [evaluator update] loss: 0.541; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00156; 
+SimpleTrainer       INFO: Epoch 895: [evaluator update] loss: 0.535; reward: 0.815; acc: 0.815
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 896: [evaluator update] loss: 0.531; reward: 0.813; acc: 0.813
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 897: [evaluator update] loss: 0.540; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 898: [evaluator update] loss: 0.505; reward: 0.823; acc: 0.823
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 899: [evaluator update] loss: 0.516; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 900: [evaluator update] loss: 0.541; reward: 0.811; acc: 0.811
+SimpleTrainer       INFO: Epoch 900: Save all checkpoints to directory /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search/900/
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 901: [evaluator update] loss: 0.543; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 902: [evaluator update] loss: 0.530; reward: 0.814; acc: 0.814
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 903: [evaluator update] loss: 0.543; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 904: [evaluator update] loss: 0.518; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 905: [evaluator update] loss: 0.545; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 906: [evaluator update] loss: 0.508; reward: 0.824; acc: 0.824
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 907: [evaluator update] loss: 0.534; reward: 0.813; acc: 0.813
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 908: [evaluator update] loss: 0.532; reward: 0.815; acc: 0.815
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 909: [evaluator update] loss: 0.524; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 910: [evaluator update] loss: 0.537; reward: 0.814; acc: 0.814
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 911: [evaluator update] loss: 0.537; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 912: [evaluator update] loss: 0.512; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 913: [evaluator update] loss: 0.525; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 914: [evaluator update] loss: 0.546; reward: 0.809; acc: 0.809
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 915: [evaluator update] loss: 0.495; reward: 0.826; acc: 0.826
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 916: [evaluator update] loss: 0.528; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 917: [evaluator update] loss: 0.538; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 918: [evaluator update] loss: 0.528; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 919: [evaluator update] loss: 0.510; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 920: [evaluator update] loss: 0.506; reward: 0.821; acc: 0.821
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 921: [evaluator update] loss: 0.533; reward: 0.814; acc: 0.814
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 922: [evaluator update] loss: 0.518; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 923: [evaluator update] loss: 0.530; reward: 0.815; acc: 0.815
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 924: [evaluator update] loss: 0.513; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 925: [evaluator update] loss: 0.520; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 926: [evaluator update] loss: 0.528; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 927: [evaluator update] loss: 0.521; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 928: [evaluator update] loss: 0.514; reward: 0.821; acc: 0.821
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 929: [evaluator update] loss: 0.515; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 930: [evaluator update] loss: 0.513; reward: 0.822; acc: 0.822
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 931: [evaluator update] loss: 0.526; reward: 0.815; acc: 0.815
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 932: [evaluator update] loss: 0.542; reward: 0.810; acc: 0.810
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 933: [evaluator update] loss: 0.534; reward: 0.813; acc: 0.813
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 934: [evaluator update] loss: 0.496; reward: 0.829; acc: 0.829
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 935: [evaluator update] loss: 0.514; reward: 0.822; acc: 0.822
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 936: [evaluator update] loss: 0.519; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 937: [evaluator update] loss: 0.518; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 938: [evaluator update] loss: 0.521; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 939: [evaluator update] loss: 0.527; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 940: [evaluator update] loss: 0.488; reward: 0.829; acc: 0.829
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 941: [evaluator update] loss: 0.521; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 942: [evaluator update] loss: 0.517; reward: 0.821; acc: 0.821
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 943: [evaluator update] loss: 0.478; reward: 0.833; acc: 0.833
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 944: [evaluator update] loss: 0.537; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 945: [evaluator update] loss: 0.503; reward: 0.825; acc: 0.825
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 946: [evaluator update] loss: 0.525; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 947: [evaluator update] loss: 0.530; reward: 0.815; acc: 0.815
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 948: [evaluator update] loss: 0.535; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 949: [evaluator update] loss: 0.522; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 950: [evaluator update] loss: 0.527; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 951: [evaluator update] loss: 0.506; reward: 0.822; acc: 0.822
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 952: [evaluator update] loss: 0.523; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 953: [evaluator update] loss: 0.531; reward: 0.815; acc: 0.815
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 954: [evaluator update] loss: 0.494; reward: 0.829; acc: 0.829
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 955: [evaluator update] loss: 0.521; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 956: [evaluator update] loss: 0.530; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 957: [evaluator update] loss: 0.516; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 958: [evaluator update] loss: 0.522; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 959: [evaluator update] loss: 0.494; reward: 0.828; acc: 0.828
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 960: [evaluator update] loss: 0.519; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 961: [evaluator update] loss: 0.530; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 962: [evaluator update] loss: 0.503; reward: 0.824; acc: 0.824
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 963: [evaluator update] loss: 0.512; reward: 0.823; acc: 0.823
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 964: [evaluator update] loss: 0.486; reward: 0.830; acc: 0.830
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 965: [evaluator update] loss: 0.532; reward: 0.815; acc: 0.815
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 966: [evaluator update] loss: 0.501; reward: 0.824; acc: 0.824
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 967: [evaluator update] loss: 0.508; reward: 0.823; acc: 0.823
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 968: [evaluator update] loss: 0.513; reward: 0.821; acc: 0.821
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 969: [evaluator update] loss: 0.510; reward: 0.822; acc: 0.822
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 970: [evaluator update] loss: 0.551; reward: 0.806; acc: 0.806
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 971: [evaluator update] loss: 0.514; reward: 0.821; acc: 0.821
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 972: [evaluator update] loss: 0.527; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 973: [evaluator update] loss: 0.506; reward: 0.825; acc: 0.825
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00078; 
+SimpleTrainer       INFO: Epoch 974: [evaluator update] loss: 0.519; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 975: [evaluator update] loss: 0.519; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 976: [evaluator update] loss: 0.512; reward: 0.821; acc: 0.821
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 977: [evaluator update] loss: 0.517; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 978: [evaluator update] loss: 0.489; reward: 0.830; acc: 0.830
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 979: [evaluator update] loss: 0.527; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 980: [evaluator update] loss: 0.529; reward: 0.814; acc: 0.814
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 981: [evaluator update] loss: 0.509; reward: 0.823; acc: 0.823
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 982: [evaluator update] loss: 0.490; reward: 0.827; acc: 0.827
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 983: [evaluator update] loss: 0.528; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 984: [evaluator update] loss: 0.519; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 985: [evaluator update] loss: 0.538; reward: 0.812; acc: 0.812
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 986: [evaluator update] loss: 0.521; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 987: [evaluator update] loss: 0.502; reward: 0.826; acc: 0.826
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 988: [evaluator update] loss: 0.499; reward: 0.825; acc: 0.825
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 989: [evaluator update] loss: 0.508; reward: 0.827; acc: 0.827
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 990: [evaluator update] loss: 0.527; reward: 0.815; acc: 0.815
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 991: [evaluator update] loss: 0.513; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 992: [evaluator update] loss: 0.482; reward: 0.834; acc: 0.834
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 993: [evaluator update] loss: 0.518; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 994: [evaluator update] loss: 0.516; reward: 0.822; acc: 0.822
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 995: [evaluator update] loss: 0.522; reward: 0.816; acc: 0.816
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 996: [evaluator update] loss: 0.523; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 997: [evaluator update] loss: 0.505; reward: 0.826; acc: 0.826
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 998: [evaluator update] loss: 0.517; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 999: [evaluator update] loss: 0.509; reward: 0.822; acc: 0.822
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 1000: [evaluator update] loss: 0.526; reward: 0.815; acc: 0.815
+SimpleTrainer       INFO: Epoch 1000: Save all checkpoints to directory /home/eva_share_users/Anonymous/surgery/NDS/new/resnexta/seed2020/full_search/1000/
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 1001: [evaluator update] loss: 0.520; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 1002: [evaluator update] loss: 0.522; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 1003: [evaluator update] loss: 0.515; reward: 0.823; acc: 0.823
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 1004: [evaluator update] loss: 0.533; reward: 0.813; acc: 0.813
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00039; 
+SimpleTrainer       INFO: Epoch 1005: [evaluator update] loss: 0.513; reward: 0.822; acc: 0.822
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1006: [evaluator update] loss: 0.519; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1007: [evaluator update] loss: 0.505; reward: 0.824; acc: 0.824
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1008: [evaluator update] loss: 0.521; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1009: [evaluator update] loss: 0.523; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1010: [evaluator update] loss: 0.504; reward: 0.824; acc: 0.824
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1011: [evaluator update] loss: 0.493; reward: 0.829; acc: 0.829
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1012: [evaluator update] loss: 0.530; reward: 0.814; acc: 0.814
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1013: [evaluator update] loss: 0.498; reward: 0.827; acc: 0.827
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1014: [evaluator update] loss: 0.511; reward: 0.821; acc: 0.821
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1015: [evaluator update] loss: 0.487; reward: 0.830; acc: 0.830
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1016: [evaluator update] loss: 0.516; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1017: [evaluator update] loss: 0.516; reward: 0.820; acc: 0.820
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1018: [evaluator update] loss: 0.495; reward: 0.827; acc: 0.827
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1019: [evaluator update] loss: 0.514; reward: 0.821; acc: 0.821
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1020: [evaluator update] loss: 0.496; reward: 0.826; acc: 0.826
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1021: [evaluator update] loss: 0.542; reward: 0.811; acc: 0.811
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1022: [evaluator update] loss: 0.522; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1023: [evaluator update] loss: 0.498; reward: 0.825; acc: 0.825
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1024: [evaluator update] loss: 0.490; reward: 0.828; acc: 0.828
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1025: [evaluator update] loss: 0.505; reward: 0.824; acc: 0.824
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1026: [evaluator update] loss: 0.485; reward: 0.830; acc: 0.830
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1027: [evaluator update] loss: 0.494; reward: 0.829; acc: 0.829
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1028: [evaluator update] loss: 0.498; reward: 0.826; acc: 0.826
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1029: [evaluator update] loss: 0.496; reward: 0.827; acc: 0.827
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1030: [evaluator update] loss: 0.494; reward: 0.828; acc: 0.828
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1031: [evaluator update] loss: 0.508; reward: 0.823; acc: 0.823
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1032: [evaluator update] loss: 0.494; reward: 0.828; acc: 0.828
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1033: [evaluator update] loss: 0.495; reward: 0.828; acc: 0.828
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1034: [evaluator update] loss: 0.499; reward: 0.827; acc: 0.827
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1035: [evaluator update] loss: 0.504; reward: 0.824; acc: 0.824
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00020; 
+SimpleTrainer       INFO: Epoch 1036: [evaluator update] loss: 0.521; reward: 0.817; acc: 0.817
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00010; 
+SimpleTrainer       INFO: Epoch 1037: [evaluator update] loss: 0.515; reward: 0.823; acc: 0.823
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00010; 
+SimpleTrainer       INFO: Epoch 1038: [evaluator update] loss: 0.480; reward: 0.833; acc: 0.833
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00010; 
+SimpleTrainer       INFO: Epoch 1039: [evaluator update] loss: 0.519; reward: 0.819; acc: 0.819
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00010; 
+SimpleTrainer       INFO: Epoch 1040: [evaluator update] loss: 0.529; reward: 0.818; acc: 0.818
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00010; 
+SimpleTrainer       INFO: Epoch 1041: [evaluator update] loss: 0.508; reward: 0.823; acc: 0.823
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00010; 
+SimpleTrainer       INFO: Epoch 1042: [evaluator update] loss: 0.497; reward: 0.827; acc: 0.827
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00010; 
+SimpleTrainer       INFO: Epoch 1043: [evaluator update] loss: 0.486; reward: 0.830; acc: 0.830
+MepaEvaluator       INFO: Schedule step   0: mepa LR: 0.00010; 
