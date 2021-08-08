@@ -13,7 +13,7 @@ First, one should make sure that the internet to PyPI/github works, since there 
     08/08 06:59:01 PM btc              WARNING: Cannot import module nasbench_301: No module named 'nasbench301'
     Should install the NASBench 301 package to use NB301Evaluator (gt perfs) following https://github.com/automl/nasbench301. However, if only supernet training / arch evaluation are needed, there is no need to install it.
     ```
-3. To plot figures using our checkpoints and logs, check `plots/README.md`.
+3. To plot figures using our checkpoints and logs, check `plots/`.
 4. To run supernet training / oneshot evaluation / zeroshot evaluation, check `instructions/README.md`. All instructions for OS training/evaluation and ZS evaluation on nb101/nb201/nb301/nds ResNet/nds ResNeXt search spaces are provided.
     * For example, you can run `cd instructions/nb201` and then `bash run_nb201_training_example.sh` to run OS training on nb201. Run the 3-rd `mynas derive` command in `run_nb201_training_example.sh` to conduct OS evaluation using a provided supernet checkpoint.
 

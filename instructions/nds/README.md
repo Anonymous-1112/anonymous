@@ -8,7 +8,7 @@ We provide the supernet implementations of ResNet/ResNeXt-A search spaces in `my
 
 ### Prepare
 
-1. Install required packages by `pip install -r ./requirements.txt`, including the [`pycls` package](https://github.com/facebookresearch/pycls).
+1. Install required packages by `pip install -r ./requirements.txt`, including the [`pycls` package](https://github.com/facebookresearch/pycls). (Note that `pycls` need Python>=3.7.6)
 2. If you have the `pytest` tool/package installed, you can try run `pytest -x ./test_germ_nds.py` to run unit test for the ResNet/ResNeXt-A supernet. The tests should pass.
 3. For derive and evaluation, one should use the data files under `nds_assets/`.
     * ResNet (25k archs): `resnet_archs_25k.yaml` contains a list of 25k arch genotypes; `resnet_gt_25k.pkl` contains all arch genotypes, param, flops, and test accs.

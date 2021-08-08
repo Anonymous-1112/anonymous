@@ -35,6 +35,6 @@ See instructions under `nds/`.
 
 We appreciate the authors of [Zero-Cost Proxies for Lightweight NAS, ICLR2021] for their efforts in providing the research codes.
 In order to evaluate ZSEs, we integrate their lib into our framework in `my_nas/objective/zerocost.py`. Thus [their lib](https://github.com/SamsungLabs/zero-cost-nas) should be installed for evaluating ZSEs.
-To evaluate `relu_logdet` and `relu` scores, one should use [our modified version](../../zero-cost-nas/) of their lib.
+To evaluate `relu_logdet` and `relu` scores, one should use [our modified version](../zero-cost-nas/) of their lib.
 
 The zeroshot configuration files on different search spaces are `nb101/zeroshot.yaml`, `nb201/zeroshot.yaml`, `nb301/zeroshot.yaml`, `nds/resnet_zeroshot.yaml`, and `resnexta_zeroshot.yaml`.
